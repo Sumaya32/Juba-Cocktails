@@ -1,0 +1,162 @@
+
+.container{
+    margin-top: 30px;
+    float: left;
+    margin-left: 5px;
+    width: 98vw;
+}
+
+
+.littleContainer{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    height: 100%;
+}
+
+ 
+a{
+    text-decoration: none;
+    color: slategrey;
+    font-size: 1.2em;
+}
+
+.miniContainer{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    width: 220px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img{    
+    margin-bottom: 2%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 20px 20px rgb(32, 32, 32);
+}
+
+
+.h1Text{
+    color: slategray;
+    font-family: "Times New Roman",Sans-serif;
+    font-size: 29px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 50px;    
+}
+
+
+.effectContainer {
+    position: relative;
+    width: 100%;
+  }
+
+  .middle {
+    background-color: black;
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-100%, -100%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  
+  .effectContainer:hover .middle {
+    opacity: 0.7;
+  }
+  
+ 
+  .text {
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    width: 100%;
+  }
+
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 98vw;
+    }
+    
+
+.kleineContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.img{
+    margin-top: 50px;
+    width: 100%;
+    height: 250px;
+}
+}
+
+
+@media screen and (width: 1024px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .logo {
+      margin-right: 200px;
+    }
+  
+.kleineContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.miniContainer{
+width: 100%;
+}
+
+.effectContainer {
+    width: 150%;
+  }
+.img{
+    margin-top: 50px;
+    width: 100%;
+    height: 250px;
+}
+  }

@@ -1,0 +1,242 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+
+
+.header {
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  border-bottom: 2px solid grey;
+  padding: 0px;
+}
+
+.logo {
+  margin-top: 5px;
+  width: 150px;
+  height: 70px;
+}
+
+
+.nav_toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav_toggle:focus~.nav_toggle_label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav_toggle_label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav_toggle_label span,
+.nav_toggle_label span::before,
+.nav_toggle_label span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav_toggle_label span::before,
+.nav_toggle_label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav_toggle_label span::before {
+  bottom: 7px;
+}
+
+.nav_toggle_label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  background: grey;
+  opacity: 0.9;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-top: 20px;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: black;
+  font-family: "Times New Roman", Sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.nav_toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+.nav_toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+
+
+
+@media screen and (min-width: 1150px) {
+  .nav_toggle_label {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+    margin-top: 10%;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: grey;
+    position: absolute;
+    bottom: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+
+  nav a:hover {
+    color: slategray;
+  }
+
+  .activeLink{
+    color: grey;
+    font-weight: bolder;
+  }
+
+  .activeLink::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: grey;
+    position: absolute;
+    bottom: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+    font-weight: bolder;
+  }
+
+.activeLink::before {
+    transform: scale(1);
+  }
+}
+
+
+
+@media screen and (width: 1024px) {
+  nav {
+    margin-left: 20%;
+  }
+
+}
+
+
+@media screen and (width: 1125px) {
+  nav {
+    margin-left: 5%;
+  }
+
+}
+
+@media screen and (width: 1280px) {
+  nav {
+    margin-left: 0%;
+  }
+
+}

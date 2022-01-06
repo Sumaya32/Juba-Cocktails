@@ -1,0 +1,335 @@
+html, body {
+    min-height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin-top: 30px;
+    float: left;
+    margin-left: 5px;
+    width: 98vw;
+}
+
+.kleineContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    min-height: 100%;
+}
+
+
+.contacContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 60px;
+    height: 550px;
+}
+
+.map {
+    color: black;
+    margin-right: 30px;
+    width: 40%;
+    height: 450px;
+}
+
+.iframe {
+    width: 100%;
+    height: 450px;
+    box-shadow: 5px 10px 20px rgb(32, 32, 32);
+    border-radius: 15px
+}
+
+a {
+    text-decoration: none;
+    color: slategrey;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: skyblue;
+}
+
+
+.contactInfo {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 450px;
+    box-shadow: 5px 10px 20px rgb(32, 32, 32);
+    border-radius: 15px
+}
+
+.contact {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    box-shadow: slategray;
+}
+
+.contactUsH1 {
+    color: slategray;
+    font-family: "Times New Roman", Sans-serif;
+    font-size: 29px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+
+
+/*Formulier*/
+
+.formulierContailner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    min-height: 100%;
+    margin-bottom: 60px;
+
+}
+
+.formulierSmallContailner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 450px;
+    box-shadow: 5px 10px 20px rgb(32, 32, 32);
+    border-radius: 15px
+}
+
+
+.formulier {
+    width: 80%;
+    height: 450px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 40%;
+    height: 450px;
+    box-shadow: 5px 10px 20px rgb(32, 32, 32);
+    border-radius: 15px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country {
+    width: 100px;
+    margin-bottom: 0px;
+}
+
+
+input, select {
+    width: 80%;
+    padding: 2px 9px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(76, 71, 104);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+select {
+    margin-bottom: 0px;
+}
+
+label {
+    width: 80%;
+
+}
+
+
+.genderLabel {
+    min-width: 500px;
+    width: 200px;
+}
+
+.radioButtonContainer {
+    width: 80%;
+    margin-bottom: 1%;
+}
+
+.radioFemale, .radioMale{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radioButtonMiniContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.genderLabelDiv{
+    width: 30%;
+}
+
+.textarea {
+    width: 80%;
+    height: 90px;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.btn {
+    background: linear-gradient(lightgrey, grey);
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    background-color: slategray;
+
+}
+
+.h1Text {
+    margin-top: 8%;
+}
+
+/*@Media*/
+@media screen and (max-width: 769px) {
+    .kleineContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .contacContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+    .contactInfo {
+        width: 80%;
+        height: 350px;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .contact {
+        width: 100%;
+        height: 350px;
+    }
+
+    .map {
+        width: 80%;
+        height: 350px;
+        margin-bottom: 5%;
+        margin-right: 0px;
+    }
+
+    .iframe {
+        width: 100%;
+        height: 350px;
+    }
+
+
+
+    .formulierContailner {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        margin-bottom: 60px;
+        flex-direction: column;
+
+    }
+
+    .formulierSmallContailner {
+        width: 80%;
+        height: 400;
+    }
+
+    .h1Text {
+        margin-top: 10%;
+    }
+    
+
+    .formulier {
+        width: 80%;
+        height: 450px;
+        margin-bottom: 30px;
+    }
+
+    .img {
+        width: 80%;
+        height: 350px;
+        margin-bottom: 5%;
+        border-radius: 15px;
+        margin-right: 0px;
+    }
+
+    .envelop {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+
+
+
+@media screen and (width: 280px) {
+     .contactInfo {
+        width: 85%;
+        margin-left: 0px;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .map {
+        width: 85%;
+        margin-right: 0px;
+    }
+
+    .formulierSmallContailner {
+        width: 85%;
+        height: 400;
+    }
+
+
+    .formulier {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 20px;
+    }
+
+    .img {
+        width: 80%;
+        margin-right: 0px;
+    }
+
+}
