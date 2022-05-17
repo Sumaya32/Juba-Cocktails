@@ -31,8 +31,7 @@ function App() {
 
         if (json.drinks) {
           for (let j = 0; j < json.drinks.length; j++) {
-            array.push(json.drinks[j])  ;
-            console.log(json.drinks[j].strDrink);         
+            array.push(json.drinks[j])  ;         
           }         
         }   
       }       
